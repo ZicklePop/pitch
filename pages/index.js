@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import Layout from '../components/layout'
 import Pitchfinder from 'pitchfinder'
 import has from 'lodash/has'
+import throttle from 'lodash/throttle'
+import round from 'lodash/round'
 
 const colors = {
   pwink: '#FF52A3'
@@ -21,6 +23,7 @@ const Index = () => {
     const hasStandardAudioContext = has(window, 'AudioContext')
     const hasWebkitAudioContext = has(window, 'webkitAudioContext')
     const isWebkitAudio = !hasStandardAudioContext && hasWebkitAudioContext
+    const updateHz = throttle((e) => setHz(e), 300)
 
     navigator.mediaDevices.getUserMedia({ audio: true }).then((stream) => {
       const AudioContext = !isWebkitAudio ? window.AudioContext : window.webkitAudioContext
@@ -32,8 +35,8 @@ const Index = () => {
       processor.onaudioprocess = function (e) {
         const float32Array = e.inputBuffer.getChannelData(0)
         const p = detectPitch(float32Array)
-        if (p) {
-          setHz(p)
+        if (p && p <= 600) {
+          updateHz(round(p))
         }
       }
     })
