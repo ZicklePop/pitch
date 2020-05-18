@@ -1,0 +1,49 @@
+{
+  "name": "melaniekat.com",
+  "version": "0.0.1",
+  "main": "server.js",
+  "license": "Unlicense",
+  "scripts": {
+    "preinstall": "npx npm-force-resolutions",
+    "dev": "next",
+    "start": "next start",
+    "build": "next build",
+    "next": "next",
+    "test": "jest",
+    "lint": "standard"
+  },
+  "dependencies": {
+    "@vx/curve": "0.0.196",
+    "@vx/group": "0.0.196",
+    "@vx/responsive": "0.0.196",
+    "@vx/scale": "0.0.196",
+    "@vx/shape": "0.0.196",
+    "next": "^9.3.3",
+    "pitchfinder": "^2.3.1",
+    "pitchy": "^2.0.0-alpha.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "tachyons": "^4.11.1"
+  },
+  "devDependencies": {
+    "jest": "^25.1.0",
+    "react-test-renderer": "^16.13.0",
+    "standard": "^14.3.3"
+  },
+  "resolutions": {
+    "minimist": "^1.2.5"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    },
+    "testPathIgnorePatterns": [
+      "<rootDir>/.next/",
+      "<rootDir>/node_modules/"
+    ]
+  },
+  "standard": {
+    "env": "jest"
+  }
+}

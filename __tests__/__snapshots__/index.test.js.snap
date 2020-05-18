@@ -1,0 +1,142 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`page - index should render 1`] = `
+<main
+  className="jsx-2152329932  vh-100 dt w-100"
+>
+  <div
+    className="jsx-4168855969 dtc v-mid tc"
+  >
+    <article
+      className="jsx-4168855969 measure-narrow center sans-serif f3 fw2 ph2"
+    >
+      <img
+        className="jsx-4168855969 br-100 h5 w5 center dib ma3"
+        src="/static/uglytarantula-commission.jpg"
+        title="commission by @uglytarantula"
+      />
+      <h1
+        className="jsx-4168855969 lh-title fw2 f2"
+      >
+        <a
+          className="jsx-4168855969 no-underline"
+          href="/"
+        >
+          Hi! My name is Melanie.
+        </a>
+      </h1>
+      <ul
+        className="jsx-4168855969 list pl0 tl"
+      >
+        <li
+          className="lh-title mv2"
+        >
+          i link blog at 
+          <a
+            className="link underline"
+            href="https://melkat.link"
+            rel="me"
+            style={
+              Object {
+                "color": "#0096DB",
+              }
+            }
+          >
+            melkat.link
+          </a>
+          
+        </li>
+        <li
+          className="lh-title mv2"
+        >
+          i code at 
+          <a
+            className="link underline"
+            href="https://melkat.dev"
+            rel="me"
+            style={
+              Object {
+                "color": "#0096DB",
+              }
+            }
+          >
+            melkat.dev
+          </a>
+          
+        </li>
+        <li
+          className="lh-title mv2"
+        >
+          my gif library is at 
+          <a
+            className="link underline"
+            href="https://myhot.pics"
+            rel="me"
+            style={
+              Object {
+                "color": "#0096DB",
+              }
+            }
+          >
+            myhot.pics
+          </a>
+          
+        </li>
+        <li
+          className="lh-title mb2 mt4"
+        >
+          i make siri shortcuts on 
+          <a
+            className="link underline"
+            href="https://routinehub.co/user/zicklepop"
+            rel="me"
+            style={
+              Object {
+                "color": "#FF52A3",
+              }
+            }
+          >
+            routinehub
+          </a>
+          
+        </li>
+        <li
+          className="lh-title mv2"
+        >
+          do you need to 
+          <a
+            className="link underline"
+            href="http://givemel.cash"
+            rel="me"
+            style={
+              Object {
+                "color": "#65A300",
+              }
+            }
+          >
+            givemel.cash
+          </a>
+          ?
+        </li>
+        <li
+          className="lh-title mb2 mt4"
+        >
+          artwork by 
+          <a
+            className="link underline"
+            href="https://www.uglytarantula.com"
+            style={
+              Object {
+                "color": "#FF5757",
+              }
+            }
+          >
+            Ugly Tarantula
+          </a>
+          
+        </li>
+      </ul>
+    </article>
+  </div>
+</main>
+`;

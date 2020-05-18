@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component - layout should render 1`] = `
+<main
+  className="jsx-2152329932  "
+/>
+`;
+
+exports[`component - layout should render with props 1`] = `
+<main
+  className="jsx-2152329932  "
+>
+  <b>
+    #content
+  </b>
+</main>
+`;

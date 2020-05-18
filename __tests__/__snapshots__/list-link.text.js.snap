@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component - layout should render 1`] = `
+<li
+  className="lh-title mv2"
+>
+  
+  <a
+    className="link underline"
+    style={
+      Object {
+        "color": "#0096DB",
+      }
+    }
+  >
+    
+  </a>
+  
+</li>
+`;
+
+exports[`component - layout should render with props 1`] = `
+<li
+  className="lh-title mv2"
+>
+  
+  <a
+    className="link underline"
+    href="https://www.uglytarantula.com"
+    style={
+      Object {
+        "color": "#0096DB",
+      }
+    }
+  >
+    Ugly Tarantula
+  </a>
+  
+</li>
+`;
