@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import Layout from '../components/layout'
 import Pitchfinder from 'pitchfinder'
 import has from 'lodash/has'
 import throttle from 'lodash/throttle'
 import round from 'lodash/round'
 
-const colors = {
-  pwink: '#FF52A3'
-}
+// const colors = {
+//   pwink: '#FF52A3'
+// }
 
 const cx = {
   main: 'vh-100 dt w-100',
@@ -29,7 +29,7 @@ const Index = () => {
       const AudioContext = !isWebkitAudio ? window.AudioContext : window.webkitAudioContext
       const audioCtx = new AudioContext()
       const source = audioCtx.createMediaStreamSource(stream)
-      const processor = isWebkitAudio ? audioCtx.createJavascriptNode(1024, 1, 1) : audioCtx.createScriptProcessor(1024, 1, 1)
+      const processor = audioCtx.createScriptProcessor(1024, 1, 1)
       source.connect(processor)
       processor.connect(audioCtx.destination)
       processor.onaudioprocess = function (e) {
@@ -47,7 +47,7 @@ const Index = () => {
       <div className={cx.container}>
         <article className={cx.article}>
           <div id='pitch'>
-            {hz}
+            {hz}{'hz'}
           </div>
         </article>
       </div>
