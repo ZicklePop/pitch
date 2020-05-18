@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Layout from '../components/layout'
 import Pitchfinder from 'pitchfinder'
+import has from 'lodash/has'
 
 const colors = {
   pwink: '#FF52A3'
@@ -17,11 +18,15 @@ const Index = () => {
   const [hz, setHz] = useState(0)
 
   if (typeof window !== 'undefined') {
+    const hasStandardAudioContext = has(window, 'AudioContext')
+    const hasWebkitAudioContext = has(window, 'webkitAudioContext')
+    const isWebkitAudio = !hasStandardAudioContext && hasWebkitAudioContext
+
     navigator.mediaDevices.getUserMedia({ audio: true }).then((stream) => {
-      const AudioContext = window.AudioContext || window.webkitAudioContext
+      const AudioContext = !isWebkitAudio ? window.AudioContext : window.webkitAudioContext
       const audioCtx = new AudioContext()
       const source = audioCtx.createMediaStreamSource(stream)
-      const processor = audioCtx.createScriptProcessor(1024, 1, 1)
+      const processor = isWebkitAudio ? audioCtx.createJavascriptNode(1024, 1, 1) : audioCtx.createScriptProcessor(1024, 1, 1)
       source.connect(processor)
       processor.connect(audioCtx.destination)
       processor.onaudioprocess = function (e) {
