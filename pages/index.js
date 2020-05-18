@@ -1,4 +1,3 @@
-/* globals AudioContext */
 import React, { useState, useEffect } from 'react'
 import Layout from '../components/layout'
 import Pitchfinder from 'pitchfinder'
@@ -19,6 +18,7 @@ const Index = () => {
 
   if (typeof window !== 'undefined') {
     navigator.mediaDevices.getUserMedia({ audio: true }).then((stream) => {
+      const AudioContext = window.AudioContext || window.webkitAudioContext
       const audioCtx = new AudioContext()
       const source = audioCtx.createMediaStreamSource(stream)
       const processor = audioCtx.createScriptProcessor(1024, 1, 1)
