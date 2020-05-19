@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { ParentSize } from '@vx/responsive'
 import { LinePath } from '@vx/shape'
-import { scaleLinear } from '@vx/scale'
+import { scaleLinear, scaleTime } from '@vx/scale'
 import { curveBasis } from '@vx/curve'
 
 const cx = {
@@ -15,7 +15,7 @@ const date = (o, i) => {
 const hz = o => o.hz
 
 const Chart = ({ color, data }) => {
-  const xScale = scaleLinear({
+  const xScale = scaleTime({
     domain: [Math.min(...data.map(date)), Math.max(...data.map(date))]
   })
   const yScale = scaleLinear({
