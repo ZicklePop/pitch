@@ -1,3 +1,4 @@
+import './get-float-time-domain-data.polyfill'
 import { PitchDetector } from 'pitchy'
 import has from 'lodash/has'
 import round from 'lodash/round'
