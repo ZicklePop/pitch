@@ -1,34 +1,30 @@
-import './get-float-time-domain-data.polyfill'
-import { PitchDetector } from 'pitchy'
+import Pitchfinder from 'pitchfinder'
 import has from 'lodash/has'
 import round from 'lodash/round'
 
-const update = (node, detector, input, sampleRate, cb) => {
-  node.getFloatTimeDomainData(input)
-  const [p, c] = detector.findPitch(input, sampleRate)
-  if (c > 0.96) {
-    if (p > 40 && p < 600) {
-      cb(round(p))
-    }
-  }
-  window.requestAnimationFrame(() => update(node, detector, input, sampleRate, cb))
-}
-
 const pitch = (cb) => {
   if (typeof window !== 'undefined') {
+    const detectPitch = new Pitchfinder.AMDF()
     const hasStandardAudioContext = has(window, 'AudioContext')
     const hasWebkitAudioContext = has(window, 'webkitAudioContext')
     const isWebkitAudio = !hasStandardAudioContext && hasWebkitAudioContext
-    const AudioContext = !isWebkitAudio ? window.AudioContext : window.webkitAudioContext
-    const audioCtx = new AudioContext()
-    const audioAnalyser = audioCtx.createAnalyser()
+
+    const update = (e) => {
+      const float32Array = e.inputBuffer.getChannelData(0)
+      const p = detectPitch(float32Array)
+      if (p > 40 && p < 600) {
+        cb(round(p))
+      }
+    }
 
     navigator.mediaDevices.getUserMedia({ audio: true }).then((stream) => {
+      const AudioContext = !isWebkitAudio ? window.AudioContext : window.webkitAudioContext
+      const audioCtx = new AudioContext()
       const source = audioCtx.createMediaStreamSource(stream)
-      source.connect(audioAnalyser)
-      const detector = PitchDetector.forFloat32Array(audioAnalyser.fftSize)
-      const input = new Float32Array(detector.inputLength)
-      update(audioAnalyser, detector, input, audioCtx.sampleRate, cb)
+      const processor = audioCtx.createScriptProcessor(256, 1, 1)
+      source.connect(processor)
+      processor.connect(audioCtx.destination)
+      processor.onaudioprocess = update
     })
   }
 }

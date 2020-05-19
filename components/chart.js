@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import { ParentSize } from '@vx/responsive'
 import { LinePath } from '@vx/shape'
 import { scaleLinear, scaleTime } from '@vx/scale'
-import { curveBasis } from '@vx/curve'
 
 const cx = {
   main: 'fixed absolute--fill'
@@ -37,7 +36,6 @@ const Chart = ({ color, data }) => {
               y={y}
               stroke={color}
               strokeWidth={2}
-              curve={curveBasis}
               width={width}
               height={height}
               margin={{

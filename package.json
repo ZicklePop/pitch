@@ -13,12 +13,11 @@
     "lint": "standard"
   },
   "dependencies": {
-    "@vx/curve": "0.0.196",
     "@vx/responsive": "0.0.196",
     "@vx/scale": "0.0.196",
     "@vx/shape": "0.0.196",
     "next": "^9.3.3",
-    "pitchy": "^2.0.0-alpha.1",
+    "pitchfinder": "^2.3.1",
     "prop-types": "^15.7.2",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
