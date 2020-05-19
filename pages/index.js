@@ -1,13 +1,9 @@
-import React, { useState } from 'react'
+import React, { useState, useCallback, useEffect } from 'react'
 import Layout from '../components/layout'
-import Pitchfinder from 'pitchfinder'
-import has from 'lodash/has'
+import pitch from '../utils/pitch'
 import throttle from 'lodash/throttle'
-import round from 'lodash/round'
-
-// const colors = {
-//   pwink: '#FF52A3'
-// }
+import slice from 'lodash/slice'
+import Chart from '../components/chart'
 
 const cx = {
   main: 'vh-100 dt w-100',
@@ -16,37 +12,20 @@ const cx = {
 }
 
 const Index = () => {
-  const detectPitch = new Pitchfinder.YIN()
   const [hz, setHz] = useState(0)
-
-  if (typeof window !== 'undefined') {
-    const hasStandardAudioContext = has(window, 'AudioContext')
-    const hasWebkitAudioContext = has(window, 'webkitAudioContext')
-    const isWebkitAudio = !hasStandardAudioContext && hasWebkitAudioContext
-    const updateHz = throttle((e) => setHz(e), 300)
-
-    navigator.mediaDevices.getUserMedia({ audio: true }).then((stream) => {
-      const AudioContext = !isWebkitAudio ? window.AudioContext : window.webkitAudioContext
-      const audioCtx = new AudioContext()
-      const source = audioCtx.createMediaStreamSource(stream)
-      const processor = audioCtx.createScriptProcessor(1024, 1, 1)
-      source.connect(processor)
-      processor.connect(audioCtx.destination)
-      processor.onaudioprocess = function (e) {
-        const float32Array = e.inputBuffer.getChannelData(0)
-        const p = detectPitch(float32Array)
-        if (p && p <= 600) {
-          updateHz(round(p))
-        }
-      }
-    })
-  }
+  const [hzHistory, setHzHistory] = useState([])
+  const handleHz = useCallback(throttle(setHz, 100), [hz])
+  pitch(handleHz)
+  useEffect(() => {
+    setHzHistory(slice(hzHistory.concat([{ hz, date: Date.now() }]), -100))
+  }, [hz])
 
   return (
     <Layout className={cx.main}>
       <div className={cx.container}>
         <article className={cx.article}>
           <div id='pitch'>
+            <Chart data={hzHistory} />
             {hz}{'hz'}
           </div>
         </article>
