@@ -1,4 +1,6 @@
+'use strict'
 // https://github.com/mohayonao/get-float-time-domain-data/blob/master/lib/get-float-time-domain-data.js
+
 
 if (global.AnalyserNode && !global.AnalyserNode.prototype.getFloatTimeDomainData) {
   var uint8 = new Uint8Array(2048)
