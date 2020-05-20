@@ -1,8 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { ParentSize } from '@vx/responsive'
-import { LinePath } from '@vx/shape'
-import { scaleLinear, scaleTime } from '@vx/scale'
+import ParentSize from '@vx/responsive/lib/components/ParentSize'
+import LinePath from '@vx/shape/lib/shapes/LinePath'
+import scaleLinear from '@vx/scale/lib/scales/linear'
+import scaleTime from '@vx/scale/lib/scales/time'
 
 const cx = {
   main: 'fixed absolute--fill'

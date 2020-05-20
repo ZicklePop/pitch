@@ -1,7 +1,7 @@
-import Pitchfinder from 'pitchfinder'
+import { AMDF } from 'pitchfinder/lib/detectors/amdf'
 import round from 'lodash/round'
 
-const detectPitch = new Pitchfinder.AMDF()
+const detectPitch = new AMDF()
 const isBrowser = typeof window !== 'undefined'
 
 const pitch = (cb) => {

@@ -1,9 +1,9 @@
 import React, { useState, useCallback, useEffect } from 'react'
+import Chart from '../components/chart'
 import Layout from '../components/layout'
 import pitch from '../utils/pitch'
-import throttle from 'lodash/throttle'
 import slice from 'lodash/slice'
-import Chart from '../components/chart'
+import throttle from 'lodash/throttle'
 
 const cx = {
   main: 'vh-100 dt w-100',
