@@ -6,7 +6,7 @@ import slice from 'lodash/slice'
 import throttle from 'lodash/throttle'
 
 const cx = {
-  main: 'vh-100 dt w-100',
+  main: 'vh-75 dt w-100',
   container: 'dtc v-mid tc',
   article: 'center',
   label: 'f2 sans-serif fw2 ph2 animate'
