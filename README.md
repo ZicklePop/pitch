@@ -32,6 +32,12 @@ fair, that's probably intentional based on how i want to use it or because worki
   i had to do something from keeping it from defaulting to 17776hz when there is no noise present.
 
 
+## known issues
+
+* **doesn't work in 3rd party ios browsers**   
+  yeah, those aren't real browsers. they run a limited version of the safari app. there's not a good way for me to debug this.
+
+
 ## apps i recommend instead
 
 * [Voice Analyst for iPhone, iPad, and Android](https://speechtools.co/voice-analyst)
