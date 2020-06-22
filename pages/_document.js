@@ -13,6 +13,7 @@ class MyDocument extends Document {
         <Head>
           <link rel='apple-touch-icon' href='/static/apple-touch-icon.png' />
           <link rel='icon' href='/static/favicon.ico' />
+          <link rel='mask-icon' sizes='any' href='/static/mask-icon.svg' color='#00d6ff' />
           <meta charSet='utf-8' />
           <meta name='keywords' content='melkat, melanie, kat' />
           <meta name='viewport' content='initial-scale=1.0, width=device-width' />
