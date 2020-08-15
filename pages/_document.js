@@ -13,7 +13,7 @@ class MyDocument extends Document {
         <Head>
           <link rel='apple-touch-icon' href='/apple-touch-icon.png' />
           <link rel='icon' href='/favicon.ico' />
-          <link rel='mask-icon' sizes='any' href='/mask-icon.svg' color='#00d6ff' />
+          <link rel='mask-icon' sizes='any' href='/mask-icon.svg' color='#FF52A3' />
           <link rel='manifest' href='/manifest.json' />
           <meta charSet='utf-8' />
           <meta name='keywords' content='melkat, melanie, kat' />
@@ -23,7 +23,7 @@ class MyDocument extends Document {
           <meta property='og:image' content='/cover.png' />
           <meta property='og:image:height' content='630' />
           <meta property='og:image:width' content='1200' />
-          <meta name='theme-color' content='#00d6ff' />
+          <meta name='theme-color' content='#FF52A3' />
         </Head>
         <body>
           <Main />
