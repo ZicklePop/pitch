@@ -17,6 +17,7 @@
     "@vx/scale": "0.0.196",
     "@vx/shape": "0.0.196",
     "next": "^9.5.1",
+    "next-pwa": "^3.1.1",
     "pitchfinder": "^2.3.1",
     "prop-types": "^15.7.2",
     "react": "^16.13.0",
@@ -29,7 +30,7 @@
     "standard": "^14.3.3"
   },
   "resolutions": {
-    "minimist": "^1.2.5"
+    "serialize-javascript": "^3.1.0"
   },
   "jest": {
     "transform": {
