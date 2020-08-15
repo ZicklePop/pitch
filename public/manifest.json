@@ -14,6 +14,12 @@
       "sizes": "1024x1204",
       "type": "image/png",
       "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-touch-icon-144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ],
   "splash_pages": null
