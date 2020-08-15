@@ -1,4 +1,12 @@
-.next/*
-node_modules/*
-out/*
+**/public/sw.js
+**/public/sw.js.map
+**/public/workbox-*.js
+**/public/workbox-*.js.map
 .DS_Store
+.env
+.env.build
+.next/
+.vercel
+.vercel/
+node_modules/
+out/

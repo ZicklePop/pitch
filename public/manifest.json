@@ -1,0 +1,20 @@
+{
+  "name": "Pitch: an experimental pitch tracker for femme voices",
+  "short_name": "Pitch",
+  "description": "an experimental pitch tracker for femme voices",
+  "theme_color": "#FF52A3",
+  "background_color": "#000000",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "1024x1204",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "splash_pages": null
+}
