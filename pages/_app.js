@@ -1,5 +1,5 @@
 import React from 'react'
-import 'tachyons'
+import 'tachyons/css/tachyons.min.css'
 
 const App = ({ Component, pageProps }) => (
   <Component {...pageProps} />
