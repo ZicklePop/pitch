@@ -1,4 +1,3 @@
-import React from 'react'
 import PropTypes from 'prop-types'
 import ParentSize from '@vx/responsive/lib/components/ParentSize'
 import LinePath from '@vx/shape/lib/shapes/LinePath'
