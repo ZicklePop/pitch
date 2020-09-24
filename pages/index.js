@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect } from 'react';
+import { useState, useCallback, useEffect } from 'react'
 import Chart from '../components/chart'
 import Layout from '../components/layout'
 import pitch from '../utils/pitch'
