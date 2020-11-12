@@ -30,7 +30,7 @@
     "next-compose-plugins": "^2.2.1",
     "next-purgecss": "^4.0.0",
     "react-test-renderer": "^17.0.1",
-    "standard": "^16.0.1"
+    "standard": "^16.0.2"
   },
   "resolutions": {
     "minimist": "^1.2.3",
