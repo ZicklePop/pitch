@@ -16,7 +16,7 @@
     "@vx/responsive": "0.0.199",
     "@vx/scale": "0.0.199",
     "@vx/shape": "0.0.199",
-    "next": "^10.0.5",
+    "next": "^10.0.6",
     "next-pwa": "^5.0.4",
     "pitchfinder": "^2.3.1",
     "prop-types": "^15.7.2",
