@@ -34,7 +34,8 @@
   },
   "resolutions": {
     "minimist": "^1.2.3",
-    "node-fetch": "^2.6.1"
+    "node-fetch": "^2.6.1",
+    "y18n": "^4.0.1"
   },
   "jest": {
     "transform": {
