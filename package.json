@@ -13,9 +13,9 @@
     "lint": "standard"
   },
   "dependencies": {
-    "@vx/responsive": "0.0.199",
-    "@vx/scale": "0.0.199",
-    "@vx/shape": "0.0.199",
+    "@visx/responsive": "^1.7.2",
+    "@visx/scale": "^1.7.2",
+    "@visx/shape": "^1.7.2",
     "next": "^10.1.2",
     "next-pwa": "^5.0.6",
     "pitchfinder": "^2.3.1",
