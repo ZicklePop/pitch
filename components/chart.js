@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types'
-import ParentSize from '@vx/responsive/lib/components/ParentSize'
-import LinePath from '@vx/shape/lib/shapes/LinePath'
-import scaleLinear from '@vx/scale/lib/scales/linear'
-import scaleTime from '@vx/scale/lib/scales/time'
+import ParentSize from '@visx/responsive/lib/components/ParentSize'
+import LinePath from '@visx/shape/lib/shapes/LinePath'
+import scaleLinear from '@visx/scale/lib/scales/linear'
+import scaleTime from '@visx/scale/lib/scales/time'
 
 const cx = {
   main: 'fixed absolute--fill'
