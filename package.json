@@ -16,7 +16,7 @@
     "@visx/responsive": "^1.10.1",
     "@visx/scale": "^1.11.1",
     "@visx/shape": "^1.12.0",
-    "next": "^10.2.0",
+    "next": "^11.0.1",
     "next-pwa": "^5.2.21",
     "pitchfinder": "^2.3.1",
     "prop-types": "^15.7.2",
@@ -25,10 +25,8 @@
     "tachyons": "^4.12.0"
   },
   "devDependencies": {
-    "@zeit/next-css": "^1.0.1",
-    "jest": "^27.0.5",
+    "jest": "^27.0.6",
     "next-compose-plugins": "^2.2.1",
-    "next-purgecss": "^4.0.0",
     "postcss": "^8.3.5",
     "react-test-renderer": "^17.0.2",
     "standard": "^16.0.3"
