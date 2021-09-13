@@ -15,7 +15,7 @@
   "dependencies": {
     "@visx/responsive": "^2.1.1",
     "@visx/scale": "^2.1.0",
-    "@visx/shape": "^2.1.0",
+    "@visx/shape": "^2.1.1",
     "next": "^11.1.2",
     "next-pwa": "^5.3.1",
     "pitchfinder": "^2.3.1",
