@@ -17,7 +17,7 @@
     "@visx/scale": "^2.1.0",
     "@visx/shape": "^2.1.1",
     "next": "^11.1.2",
-    "next-pwa": "^5.3.1",
+    "next-pwa": "^5.4.0",
     "pitchfinder": "^2.3.1",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
